@@ -21,7 +21,7 @@
 title: DB 맛집
 email: tnwls3879@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  sjlee84db
+     sjlee84db
 # baseurl: "/" # the subpath of your site, e.g. /blog
 # url: "http://ejjoo.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: sjlee84db
