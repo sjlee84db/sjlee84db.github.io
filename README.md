@@ -4,8 +4,6 @@ title: About
 permalink: /about/
 ---
 
-111
-
 ## Theme Monos
 > Simple and lightweight theme for Jekyll
 
