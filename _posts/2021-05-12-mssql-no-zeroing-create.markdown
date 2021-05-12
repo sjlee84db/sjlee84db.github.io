@@ -15,7 +15,8 @@ category: MSSQL
 4. 사용자 또는 그룹 추가 를 클릭하고 SQL Server 서비스를 실행하는 계정(Default: NT SERVICE\MSSQLSERVER)을 추가합니다.
 5. 적용 을 클릭한 다음 모든 로컬 보안 정책 대화 상자를 닫습니다.
 6. SQL Server 서비스를 다시 시작합니다
-![title](/public/img/mssql_로컬보안정책.JPG)
+
+<img src="/public/img/mssql_로컬보안정책.JPG" width="700" ></img>
 
 
 ## 확인
