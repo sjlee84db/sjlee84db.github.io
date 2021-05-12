@@ -7,7 +7,7 @@ category: MSSQL
 
 ## 방법
 
-```ruby
+```sql
 USE master;  
 GO  
 ALTER DATABASE MyTestDatabase SET SINGLE_USER WITH ROLLBACK IMMEDIATE
