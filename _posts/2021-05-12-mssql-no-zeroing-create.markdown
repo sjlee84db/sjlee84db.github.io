@@ -24,5 +24,5 @@ sp_readerrorlog
 Database Instant File Initialization: 사용. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
 ```
 
-> 참고 자료
+# 참고 자료
 > https://docs.microsoft.com/ko-kr/sql/relational-databases/databases/database-instant-file-initialization?view=sql-server-ver15
