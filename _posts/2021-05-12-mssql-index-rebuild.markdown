@@ -21,15 +21,14 @@ DECLARE @tablename varchar(1000),@ownerName  varchar(1000)
 SET @i = 1
 DECLARE DB_Cursor CURSOR FOR 
  SELECT TABLE_SCHEMA, TABLE_NAME 
-   FROM INFORMATION_SCHEMA.TABLES  
-  WHERE TABLE_TYPE = 'BASE TABLE' ORDER BY TABLE_SCHEMA, TABLE_NAME
+ FROM INFORMATION_SCHEMA.TABLES  
+ WHERE TABLE_TYPE = 'BASE TABLE' ORDER BY TABLE_SCHEMA, TABLE_NAME
 OPEN DB_Cursor
 FETCH NEXT FROM DB_Cursor
 INTO @ownerName, @tablename
 WHILE @@FETCH_STATUS = 0
 BEGIN
- SET @sql='ALTER INDEX ALL ON ' + @ownerName + '.' + @tablename
-         +' REBUILD WITH (PAD_INDEX = ON, FILLFACTOR = 90) '
+ SET @sql='ALTER INDEX ALL ON ' + @ownerName + '.' + @tablename + ' REBUILD WITH (PAD_INDEX = ON, FILLFACTOR = 90) '
  EXEC (@sql)
  PRINT CONVERT(VARCHAR, @i) + '__' + @ownerName + '.' + @tablename + '............ OK'
  SET @i = @i + 1
