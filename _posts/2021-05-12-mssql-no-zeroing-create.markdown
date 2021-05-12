@@ -16,16 +16,19 @@ category: MSSQL
 5. 적용 을 클릭한 다음 모든 로컬 보안 정책 대화 상자를 닫습니다.
 6. SQL Server 서비스를 다시 시작합니다
 
+
 <img src="/public/img/mssql_로컬보안정책.JPG" width="700" ></img>
 
 
 ## 확인
 > SQLServer 재시작 이후 ERRORLOG에서 권한 적용 여부를 확인
-```
+<pre>
+<code>
 sp_readerrorlog
 
 Database Instant File Initialization: 사용. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
-```
+</code>
+</pre>
 
 
 ### 참고 자료
