@@ -23,7 +23,7 @@ category: MSSQL
 ## 확인
 > SQLServer 재시작 이후 ERRORLOG에서 권한 적용 여부를 확인
 
-```ruby
+```sql
  sp_readerrorlog
 
  Database Instant File Initialization: 사용. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
