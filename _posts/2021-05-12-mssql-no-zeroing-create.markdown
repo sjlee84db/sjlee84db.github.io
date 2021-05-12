@@ -17,19 +17,16 @@ category: MSSQL
 6. SQL Server 서비스를 다시 시작합니다
 
 
-<img src="/public/img/mssql_로컬보안정책.JPG" width="700" ></img>
+<img src="/public/img/mssql_로컬보안정책.JPG" width="700" >
 
 
 ## 확인
 > SQLServer 재시작 이후 ERRORLOG에서 권한 적용 여부를 확인
-<pre>
-<code>
-sp_readerrorlog
+```java
+ sp_readerrorlog
 
-Database Instant File Initialization: 사용. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
-</code>
-</pre>
-
+ Database Instant File Initialization: 사용. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
+```
 
 ### 참고 자료
 > https://docs.microsoft.com/ko-kr/sql/relational-databases/databases/database-instant-file-initialization?view=sql-server-ver15
