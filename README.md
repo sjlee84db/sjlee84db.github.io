@@ -27,7 +27,7 @@ permalink: /about/
 ### Skill
 > DB
   - MSSQL, MySQL, Postgres, Redis
-  - 
+
 > Cloud
   - AWS, GCP, Azure, Tencent
 
