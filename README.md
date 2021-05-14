@@ -26,13 +26,10 @@ permalink: /about/
 
 ### Skill
 > DB
-  - MSSQL, MySQL, Postgres, Redis
-
+- MSSQL, MySQL, Postgres, Redis
 
 > Cloud
-  - AWS, GCP, Azure, Tencent
-
+- AWS, GCP, Azure, Tencent
 
 > Programming
-  - Python, C++, ASP, ASP.NET
-
+- Python, C++, ASP, ASP.NET
