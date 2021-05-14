@@ -25,9 +25,11 @@ permalink: /about/
 - 대용량 Log 처리
 
 ### Skill
--DB
+> DB
   - MSSQL, MySQL, Postgres, Redis
-- Cloud
+  - 
+> Cloud
   - AWS, GCP, Azure, Tencent
-- Programming
+
+> Programming
   - Python, C++, ASP, ASP.NET
