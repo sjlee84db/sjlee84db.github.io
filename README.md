@@ -4,30 +4,26 @@ title: About
 permalink: /about/
 ---
 
-## Theme Monos
-> Simple and lightweight theme for Jekyll
+## Company
+> Netmarble : 2018.06 ~
+- 리치워즈, 고포류, 7대죄 한국/일본, 세븐나이츠2 한국
+- 넷마블 DB 인증심사
+- 잼팟 DB Azure 환경으로 이관
+- DB 운영툴(zabbix, graylog, telegraf, grafana, awx ...)
+> Allm : 2015.10 ~ 2018.05
+- 크리티카 온라인
+> T3 : 2012.08 ~ 2015.09
+- FMC2
+- 삼국지천(MMORPG)
+> MGame : 2010.02 ~ 2012.07
+- 열혈강호(MMORPG)
+> 모비젠 : 2008.09 ~ 2010.01
+- 대용량 Log 처리
 
-### Features
-- Responsive.
-- Syntax Highlight
-- Most optimized theme for tech blog.
-- Lightweight with minimum stylesheet.
-- Easy to customize.
-- Offers category menu.
-
-### _config.yml
-> Code block will look like this.
-```yml
-highlighter-theme: monokai //you can change your syntax color scheme.
-date_format: "%Y-%M-%D" //and date format.
-```
-
-### Screenshots
-#### Page
-![alt text](/public/img/screenshot-1.png)
-#### Articles
-![alt text](/public/img/screenshot-2.png)
-#### Page - Mobile
-![alt text](/public/img/screenshot-m1.png)
-#### Page - Articles
-![alt text](/public/img/screenshot-m2.png)
+### Skill
+-DB
+  - MSSQL, MySQL, Postgres, Redis
+- Cloud
+  - AWS, GCP, Azure, Tencent
+- Programming
+  - Python, C++, ASP, ASP.NET
