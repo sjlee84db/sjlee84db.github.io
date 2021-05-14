@@ -1,0 +1,37 @@
+---
+layout: post
+title: MSSQL Windows Cluster + AlwaysOn 구성 시 주의점
+date: 2021-05-14 15:00:00 +0900
+category: MSSQL
+---
+
+## 구성 시 주의점
+
+- Windows Cluster 용도 VIP 1ea, 리스너 용도 VIP 1 ea 필요함
+- 구성 장비의 IP는 Static IP로 설정
+  - DHCP로 IP를 할당 받을 경우 Cluster 및 리스너 VIP를 설정 할 수 없음
+- 이중화 구성 장비 간 아래 PORT의 방화벽 오픈이 필요 ( 오픈해야 하는 PORT가 많으므로 보안 이슈 확인 후 장비 간 Any 오픈 )
+  - MSSQL 실행 PORT : 1433(기본포트)
+  - 클러스터 서비스 : 3343(TCP, UDP)
+  - RPC : 135(TCP)
+  - 클러스터 어드민 : 137(UDP)  
+  - 랜덤 포트 : 1024 ~ 65535, 49152 ~ 65535
+- 원할한 Failover를 위해 쿼럼 서버를 추가
+  - 장비가 3 ea 이상인 경우도 쿼럼 서버를 추가하는것이 안전함.
+- Active와 Standby의 DB 데이터 저장 구조(mdf, ldf Path)가 같아야함
+- EnterPrise 버전만 여러개의 DB를 AlwaysOn 구성이 가능
+  - Standard 버전은 하나의 DB만 AlwaysOn 구성이 가능
+- 안정적인 AlwaysOn 운영을 위해 클러스터 장비 간 Heartbeat Network 구성이 필요
+- Remote Registry Service 사용
+- 로컬 보안 설정의 '네트워크에서 이 컴퓨터로 엑세스' 속성에 "Authenticated Users"가 포함되어야 함)
+- 클러스터 구성 시 스토리지를 공유해서 사용하지 않도록 설정
+  - 스토리지 공유 : MSCS(Microsoft Cluster Service)방식 이중화
+  - 스토리지 공유 하지 않음 : AlwaysOn 방식 이중화
+- AlwaysOn 구성 후, Alwayon Group의 OwnerNode와 클러스터 그룹의 OwnerNode 그룹이 일치 해야함
+  - powerShell의 'get-Cluster-Group' 명령어로 확인 가능
+  - Node 이동은 Failover Clustering의 '추가 작업' -> 코어 클러스터 리소스 이동 -> 노드 선택 메뉴로 변경 가능
+- 일반적으로 AlwaysOn 구성 시, 처리 속도는 20% ~ 30% 느려질 수 있음
+  - 처리 지연이 발생하는 경우 mdf, ldf 모두 고성능 SSD로 변경하거나, 동기화 간 암호화 로직을 제거하는 방법이 있음.
+
+### 참고 자료
+> https://docs.entcloud.swisscom.com/guide/managed-services/managed-os/technical-description/windows-server-failover-cluster/#network
