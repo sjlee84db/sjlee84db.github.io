@@ -28,8 +28,11 @@ permalink: /about/
 > DB
   - MSSQL, MySQL, Postgres, Redis
 
+
 > Cloud
   - AWS, GCP, Azure, Tencent
 
+
 > Programming
   - Python, C++, ASP, ASP.NET
+
